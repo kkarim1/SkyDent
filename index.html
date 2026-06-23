@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyDent</title>
+  <meta name="description" content="موقع SkyDent في الإسكندرية، فروع متعددة وحجز مباشر عبر واتساب.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="SkyDent">
+      <img src="assets/logo.jpg" alt="شعار SkyDent">
+      <span>SkyDent</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="siteNav" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="siteNav" class="site-nav" aria-label="روابط الموقع">
+      <a href="#services">خدماتنا</a>
+      <a href="#gallery">العروض</a>
+      <a href="#branches">فروعنا</a>
+      <a href="#contact">احجز الآن</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <img class="hero-bg" src="assets/hero.png" alt="SkyDent">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="assets/logo.jpg" alt="SkyDent">
+        <p class="eyebrow">SkyDent في الإسكندرية</p>
+        <h1 id="heroTitle">أهلا بكم في SkyDent</h1>
+        <p class="welcome-text">نرحب بكم في SkyDent، حيث الرعاية الدقيقة والتقنيات الحديثة وابتسامة أجمل تبدأ من أول زيارة.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V3m8 4V3M4 11h16M5 7h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/></svg>
+            احجز الآن
+          </a>
+          <a class="btn ghost" href="#branches">فروعنا</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-band" aria-label="مميزات SkyDent">
+      <div><strong>7 فروع</strong><span>منتشرة داخل الإسكندرية</span></div>
+      <div><strong>واتساب مباشر</strong><span>تواصل سريع مع أقرب فرع</span></div>
+      <div><strong>رعاية متكاملة</strong><span>تجميل، تقويم، زراعة، علاج جذور</span></div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-head">
+        <p class="eyebrow">خدماتنا</p>
+        <h2>رعاية أسنان متكاملة بلمسة عصرية</h2>
+      </div>
+      <div class="service-grid">
+        <article><h3>تجميل الأسنان</h3><p>حلول لتحسين شكل الابتسامة وتناسقها مع متابعة دقيقة قبل وبعد العلاج.</p></article>
+        <article><h3>تقويم الأسنان</h3><p>خطط تقويم مناسبة للسن والحالة للوصول لابتسامة مرتبة وواثقة.</p></article>
+        <article><h3>زراعة الأسنان</h3><p>بدائل ثابتة للأسنان المفقودة مع اهتمام بالراحة والشكل الطبيعي.</p></article>
+        <article><h3>علاج الجذور</h3><p>علاج الألم ومشاكل العصب بخطوات واضحة تساعدك ترجع لراحتك بسرعة.</p></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-head">
+        <p class="eyebrow">من SkyDent</p>
+        <h2>صور وعروض مختارة</h2>
+      </div>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </section>
+
+    <section id="branches" class="section branches-section">
+      <div class="section-head">
+        <p class="eyebrow">فروعنا</p>
+        <h2>اختار أقرب فرع وتواصل مباشرة</h2>
+      </div>
+      <div class="branches-layout">
+        <div id="branchesGrid" class="branches-grid"></div>
+        <aside class="branches-visual" aria-label="صورة فروع SkyDent">
+          <img src="assets/branches.jpg" alt="عناوين فروع SkyDent في الإسكندرية">
+          <p>الفروع مكتوبة كنص داخل الموقع لسهولة البحث والنسخ والوصول لواتساب.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">احجز الآن</p>
+          <h2>معلومات الاتصال</h2>
+          <p>اضغط على أقرب فرع للتواصل واتساب مباشرة، أو تابع صفحة الفيسبوك لمعرفة أحدث العروض.</p>
+        </div>
+        <div class="contact-actions">
+          <a id="mainWhatsapp" class="btn primary" href="#" target="_blank" rel="noopener">واتساب مباشر</a>
+          <a class="btn facebook" href="https://www.facebook.com/Skydenttcenter/" target="_blank" rel="noopener">صفحة الفيسبوك</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-book" href="#contact" aria-label="احجز الآن">احجز الآن</a>
+
+  <footer>
+    <img src="assets/logo.jpg" alt="SkyDent">
+    <p>SkyDent</p>
+    <a href="https://www.facebook.com/Skydenttcenter/" target="_blank" rel="noopener">facebook.com/Skydenttcenter</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
