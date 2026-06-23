@@ -2,27 +2,26 @@ import streamlit as st
 import streamlit.components.v1 as components
 import os
 
-# إعداد الصفحة لتأخذ العرض الكامل للشاشة وبدون حواف بيضاء مزعجة
+# إعداد الصفحة
 st.set_page_config(layout="wide", page_title="SkyDent")
 
-# كود لإخفاء شريط ستريمليت العلوي والسفلي لتظهر الصفحة كأنها موقع مستقل تماماً
+# إخفاء عناصر ستريمليت الافتراضية
 st.markdown("""
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     body {margin: 0; padding: 0;}
-    iframe {border: none;}
+    div[data-testid="stStaticComponentContainer"] {padding: 0;}
     </style>
-""", unsafe_style=True)
+""", unsafe_allow_html=True)
 
-# دالة لقراءة ملف الـ HTML الأساسي
-def load_html():
-    if os.path.exists("index.html"):
-        with open("index.html", "r", encoding="utf-8") as f:
-            return f.read()
-    return "<h3>ملف index.html غير موجود في المجلد الرئيسي!</h3>"
-
-# عرض الموقع بالكامل داخل التنسيق الصحيح
-html_content = load_html()
-components.html(html_content, height=1200, scrolling=True)
+# قراءة وعرض ملف الـ HTML
+if os.path.exists("index.html"):
+    with open("index.html", "r", encoding="utf-8") as f:
+        html_content = f.read()
+    
+    # عرض الموقع بطريقة تسمح بالتمرير وبأعلى كفاءة
+    components.html(html_content, height=1500, scrolling=True)
+else:
+    st.error("ملف index.html غير موجود في المستودع الرئيسي!")
